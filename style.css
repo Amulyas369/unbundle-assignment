@@ -1,0 +1,231 @@
+body {
+    background: transparent; /* Make it white if you need */
+    padding:0 24px;
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .section1{
+    width: 100%;
+    padding: 20px;
+    background: url("https://img.freepik.com/premium-photo/world-chocolate-day-concept-chocolate-wood-table-with-blur-background_42331-5461.jpg")no-repeat;
+    background-size: cover;
+   
+  }
+  .crousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+.crousel {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+    
+}
+.crousel-slide {
+    width: 100%;
+    flex: 0 0 100%;
+}
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 12px;
+    
+
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* For Add Chocolate list */
+
+.custom-pack-container{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    align-self: center;
+}
+.chocolate-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+.chocolate-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.choco-img{
+  width: 200px;
+  height: 100px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.chocolate-item>div{
+    font-size: large;
+    font-weight: bold;
+    color: #363535;
+}
+.chocolate-item>button{
+  padding:5px;
+  text-align: center;
+  background-color: rgba(255, 0, 0, .9);
+  font-size: medium;
+   font-weight: bold;
+   color: #fff;
+   border-radius: 8px;
+   border: none;
+   outline: none;
+}
+.selected-chocolates-container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    border-radius: 12px;
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.selected-chocolates{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.selected-chocolates-list{
+    list-style-type: decimal;
+    width: 100%;
+}
+
+.listItem{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:space-evenly;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.listItem>img{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+.listItem>div{
+   font-size: medium;
+   font-weight: bold;
+   color: #363535;
+}
+.listItem>button{
+    padding: 5px;
+    font-weight: bold;
+    background-color:#1da1f2;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.total-price{
+    font-size: large;
+    font-weight: bold;
+    color: #363535;
+
+}
+.custom-pack-container>h1{
+    color: #040125;
+    opacity: .8;
+  }
+  .selected-chocolates>h2{
+    color: #040125;
+    opacity: .8;
+  }
+
+
+
+@media screen and (max-width: 480px) {
+    .crousel-container{
+        max-width:300px;
+    }
+    .selected-chocolates-container {
+      max-width:300px;
+      padding:20px;
+    }
+    .choco-img{
+        max-width:140px;
+        height:80px;
+      }
+      .listItem>div{
+        font-size: small;
+        font-weight: bold;
+        color: #363535;
+     }
+     .chocolate-item>button{
+        font-size: small;
+         font-weight: bold;
+         
+      }
+      .custom-pack-container>h1{
+        font-size:large;
+        font-weight: bold;
+      }
+      .selected-chocolates>h2{
+        font-size:large;
+        font-weight: bold;
+      }
+      .chocolate-item>div{
+        font-size: small;
+        font-weight: bold;
+    }
+  }
+  @media screen and (max-width: 880px){
+    .crousel-container{
+        max-width:500px;
+    }
+  }
